@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/update-profile}"
+      th:object="${restaurantProfile}"
+      method="post">
+
+    <label>Tên cửa hàng:</label>
+    <input type="text" th:field="*{name}" />
+
+    <label>Số điện thoại:</label>
+    <input type="text" th:field="*{phone}" />
+
+    <label>Đang mở cửa:</label>
+    <input type="checkbox" th:field="*{active}" />
+
+    <button type="submit">Lưu thông tin</button>
+
+</form>
+</body>
+</html>
